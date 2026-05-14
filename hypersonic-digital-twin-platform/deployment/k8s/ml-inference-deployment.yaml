@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aether-ml-inference
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aether-ml-inference
+  template:
+    metadata:
+      labels:
+        app: aether-ml-inference
+    spec:
+      containers:
+        - name: ml-inference
+          image: aether-twin/ml-inference:future
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+

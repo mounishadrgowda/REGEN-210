@@ -1,0 +1,8 @@
+{
+  "id": "plasma_shielding",
+  "name": "Plasma Shielding Thermal Modifier",
+  "version": "0.1.0",
+  "entrypoint": "plugin.py",
+  "capabilities": ["thermal_modifier", "visualization_layer"]
+}
+

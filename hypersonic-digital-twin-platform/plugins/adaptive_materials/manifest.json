@@ -1,0 +1,8 @@
+{
+  "id": "adaptive_materials",
+  "name": "Adaptive Materials Risk Moderator",
+  "version": "0.1.0",
+  "entrypoint": "plugin.py",
+  "capabilities": ["risk_modifier", "material_system"]
+}
+
