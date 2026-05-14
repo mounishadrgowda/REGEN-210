@@ -1,0 +1,7 @@
+{
+  "id": "rpic",
+  "name": "RPIC Plasma Injection Controller",
+  "version": "0.1.0",
+  "entrypoint": "plugin.py",
+  "capabilities": ["thermal_modifier", "plasma_control"]
+}

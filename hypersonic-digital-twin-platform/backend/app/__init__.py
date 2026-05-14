@@ -1,2 +1,0 @@
-"""AETHER-TWIN backend package."""
-
