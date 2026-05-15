@@ -1,2 +1,0 @@
-"""ML inference adapters."""
-

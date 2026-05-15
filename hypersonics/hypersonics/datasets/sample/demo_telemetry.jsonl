@@ -1,4 +1,0 @@
-{"simulation_id":"demo","time_s":0.0,"aircraft":{"mach":6.8,"altitude_m":31000},"thermal":{"heat_flux_w_m2":1620000,"max_surface_temp_k":980,"thermal_margin":0.55},"cooling":{"efficiency":0.39,"mass_flow_kg_s":0.8},"risk":{"level":"nominal","score":0.22}}
-{"simulation_id":"demo","time_s":5.0,"aircraft":{"mach":7.0,"altitude_m":30950},"thermal":{"heat_flux_w_m2":1760000,"max_surface_temp_k":1115,"thermal_margin":0.49},"cooling":{"efficiency":0.41,"mass_flow_kg_s":0.8},"risk":{"level":"nominal","score":0.28}}
-{"simulation_id":"demo","time_s":10.0,"aircraft":{"mach":7.3,"altitude_m":30900},"thermal":{"heat_flux_w_m2":1940000,"max_surface_temp_k":1305,"thermal_margin":0.41},"cooling":{"efficiency":0.43,"mass_flow_kg_s":0.8},"risk":{"level":"guarded","score":0.44}}
-

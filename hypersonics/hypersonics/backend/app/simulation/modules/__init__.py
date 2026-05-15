@@ -1,2 +1,0 @@
-"""Swappable physics modules."""
-

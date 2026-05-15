@@ -1,2 +1,0 @@
-"""Plugin loading and registration."""
-
