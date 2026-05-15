@@ -63,17 +63,17 @@ def create_state(self, request: SimulationStartRequest) -> DigitalTwinState:
     return state
 
     def tick(self, state: DigitalTwinState, dt_s: float) -> DigitalTwinState:
-    state.time_s += dt_s
-    state.aircraft.mach += 0.015
-    state.aircraft.altitude_m = max(18000, state.aircraft.altitude_m - 9.0 * dt_s)
+        state.time_s += dt_s
+        state.aircraft.mach += 0.015
+        state.aircraft.altitude_m = max(18000, state.aircraft.altitude_m - 9.0 * dt_s)
 
-    state = self.aerodynamics.update(state, dt_s)
-    state = self.thermal.update(state, dt_s)
-    state = self.plugin_registry.run_phase("post_thermal", state, dt_s)  # RPIC runs here
-    state = self.zonal_cooling.update(state, dt_s)      # ← replaces RegenerativeCoolingModule
-    state = self.thermal.update(state, 0)               # recompute wall temp with net flux
-    state = self.risk.update(state, dt_s)
-    state = self.sustainability.update(state, dt_s)
-    state = self.ml.update(state, dt_s)
-    state = self.plugin_registry.run_phase("post_risk", state, dt_s)
-    return state
+        state = self.aerodynamics.update(state, dt_s)
+        state = self.thermal.update(state, dt_s)
+        state = self.plugin_registry.run_phase("post_thermal", state, dt_s)
+        state = self.cooling.update(state, dt_s)
+        state = self.thermal.update(state, 0)
+        state = self.risk.update(state, dt_s)
+        state = self.sustainability.update(state, dt_s)
+        state = self.ml.update(state, dt_s)
+        state = self.plugin_registry.run_phase("post_risk", state, dt_s)
+        return state
